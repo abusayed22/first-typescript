@@ -57,3 +57,15 @@ const allisFunc = (id, user) => {
     console.log(`id is ${id}, name is ${user.name} & age ${user.age}`);
 };
 allisFunc(2, { name: "sayed", age: 27 });
+// function signiture
+// 1st
+let testfunc;
+testfunc = (a, b, c) => {
+    if (c === 'add') {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
+};
+testfunc(6, 4, 'add');
