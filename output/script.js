@@ -31,3 +31,15 @@ c = {
     age: 'sayed',
     adult: true
 };
+// special type ::: function type (is more importent)
+let myfunc;
+myfunc = (a, b, c) => {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+};
+myfunc(4, 5, 6);
+const novoid = (a, b, c) => {
+    return (a + b);
+};
+novoid(3, 5, 6);
