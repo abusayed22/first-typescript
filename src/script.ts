@@ -19,7 +19,7 @@ a = {
 };
 
 // explicit type
-function explicit(name:string,age:number, date: Date) {
+function explicit(name: string, age: number, date: Date) {
     console.log(`my name is ${name}, i am ${age} years old & now date ${Date}`);
 };
 explicit('sayed', 27, new Date())
@@ -48,16 +48,36 @@ c = {
 }
 
 // special type ::: function type (is more importent)
-let myfunc:Function
+let myfunc: Function
 
-myfunc = (a:number, b:number ,c?: number) => {
+myfunc = (a: number, b: number, c?: number) => {
     console.log(a);
     console.log(b);
     console.log(c);
 }
-myfunc(4,5,6)
+myfunc(4, 5, 6)
 
-const novoid = (a:number, b:number, c?: number) => {
-    return (a+b)
+const novoid = (a: number, b: number, c?: number) => {
+    return (a + b)
 }
-novoid(3,5,6)
+novoid(3, 5, 6)
+
+// Aliases type
+//1st
+const useDetails = (id: number | string, age: number) => {
+    console.log(`${id} is id & age is ${age}`);
+};
+useDetails('345', 27);
+
+// 2nd
+const sayHello = (user: { name: string, age: number }) => {
+    console.log(`name is ${user.name} & age is ${user.age}`);
+};
+
+type stringOrNumber = string | number;
+type userType = {name: stringOrNumber, age:number};
+const allisFunc = (id: number, user: userType) {
+    console.log(`id is ${id}, name is ${user.name} & age ${user.age}`);
+}
+
+allisFunc(2,'sayed', 27)
