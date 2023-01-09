@@ -74,10 +74,13 @@ const sayHello = (user: { name: string, age: number }) => {
     console.log(`name is ${user.name} & age is ${user.age}`);
 };
 
+
+
 type stringOrNumber = string | number;
 type userType = {name: stringOrNumber, age:number};
-const allisFunc = (id: number, user: userType) {
+
+const allisFunc = (id: number, user: userType) => {
     console.log(`id is ${id}, name is ${user.name} & age ${user.age}`);
 }
 
-allisFunc(2,'sayed', 27)
+allisFunc(2, {name:"sayed",age: 27})

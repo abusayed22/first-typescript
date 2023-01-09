@@ -56,4 +56,4 @@ const sayHello = (user) => {
 const allisFunc = (id, user) => {
     console.log(`id is ${id}, name is ${user.name} & age ${user.age}`);
 };
-allisFunc(2, 'sayed', 27);
+allisFunc(2, { name: "sayed", age: 27 });
