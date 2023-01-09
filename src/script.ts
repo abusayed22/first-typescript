@@ -30,4 +30,19 @@ arr.push('sayed', 27, true);
 
 
 
-// dynamic 
+// dynamic or any type (don't use any type , if very needed this type so can use)
+let b: any[] = [];
+b.push('sayed');
+b.push(27)
+b.push(true);
+
+let c: {
+    name: any,
+    age: any,
+    adult: any
+}
+c = {
+    name: 27,
+    age: 'sayed',
+    adult: true
+}

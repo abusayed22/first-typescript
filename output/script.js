@@ -20,4 +20,14 @@ explicit('sayed', 27, new Date());
 // union type
 let arr = [];
 arr.push('sayed', 27, true);
-// dynamic 
+// dynamic or any type (don't use any type , if very needed this type so can use)
+let b = [];
+b.push('sayed');
+b.push(27);
+b.push(true);
+let c;
+c = {
+    name: 27,
+    age: 'sayed',
+    adult: true
+};
