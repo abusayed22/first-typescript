@@ -69,3 +69,20 @@ testfunc = (a, b, c) => {
     }
 };
 testfunc(6, 4, 'add');
+// classes type
+class captain {
+    constructor(n, a, c) {
+        this.name = n,
+            this.age = a,
+            this.country = c;
+    }
+    play() {
+        console.log(`Name: ${this.name}. player age: ${this.age} from ${this.country}`);
+    }
+}
+;
+const mashrafi = new captain("Mashrafi", 40, "Bangladesh");
+const sakib = new captain("Sakib", 37, "Bangladesh");
+const players = [];
+players.push(mashrafi);
+players.push(sakib);
