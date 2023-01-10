@@ -184,3 +184,33 @@ const response1 : apiResponse<object>  = {
     },
     //data:"kuddos" is error
 }
+
+
+// enums type
+
+enum rtype {
+    SUCCESS,
+    Failure,
+    Forbidden,
+    UnAuthentication
+
+}
+interface apiRespons<T> {
+    status: number;
+    type: rtype;
+    data: T
+}
+const response2 : apiRespons<string>  = {
+    status: 200,
+    type: rtype.SUCCESS,
+    data:"kuddos",
+}
+// console.log(response2);
+// data: status: 200,
+// type: 0,
+// data: kuddos
+
+        //Tuples type
+let x = [3, 'hello', {p:8}];
+// let y : [number | string | object] = [2,'test',{q:4}]
+

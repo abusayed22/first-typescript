@@ -134,3 +134,23 @@ const response1 = {
     },
     //data:"kuddos" is error
 };
+// enums type
+var rtype;
+(function (rtype) {
+    rtype[rtype["SUCCESS"] = 0] = "SUCCESS";
+    rtype[rtype["Failure"] = 1] = "Failure";
+    rtype[rtype["Forbidden"] = 2] = "Forbidden";
+    rtype[rtype["UnAuthentication"] = 3] = "UnAuthentication";
+})(rtype || (rtype = {}));
+const response2 = {
+    status: 200,
+    type: rtype.SUCCESS,
+    data: "kuddos",
+};
+// console.log(response2);
+// data: status: 200,
+// type: 0,
+// data: kuddos
+//Tuples type
+let x = [3, 'hello', { p: 8 }];
+// let y : [number | string | object] = [2,'test',{q:4}]
