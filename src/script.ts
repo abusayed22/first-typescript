@@ -150,3 +150,37 @@ players.push(sakib);
 
     // mashrafi.country = "England" (don't work, it's readonly)
     console.log(mashrafi.country);
+
+
+        //generic type
+function addId <T extends {name: string,age:number}>(obj: T) {
+    let id = Math.floor(Math.random() * 100);
+    return {...obj, id}
+}
+
+let user = addId({
+    name:'sakib',
+    age: 35,
+    country: "Bangladesh"
+});
+
+// let user = "kuddos" 
+
+user.age
+user.country
+
+        // generic & interface type
+interface apiResponse<T> {
+    status: number,
+    type: string,
+    data: T
+}
+const response1 : apiResponse<object>  = {
+    status: 200,
+    type: 'done',
+    data:  {
+        name: 'kuddos',
+        from: "Bangladesh"
+    },
+    //data:"kuddos" is error
+}

@@ -112,3 +112,25 @@ console.log(mashrafi.name);
 // console.log(mashrafi.age);(don't work, it's private)
 // mashrafi.country = "England" (don't work, it's readonly)
 console.log(mashrafi.country);
+//generic type
+function addId(obj) {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+}
+let user = addId({
+    name: 'sakib',
+    age: 35,
+    country: "Bangladesh"
+});
+// let user = "kuddos" 
+user.age;
+user.country;
+const response1 = {
+    status: 200,
+    type: 'done',
+    data: {
+        name: 'kuddos',
+        from: "Bangladesh"
+    },
+    //data:"kuddos" is error
+};
