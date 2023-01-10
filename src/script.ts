@@ -77,39 +77,59 @@ const sayHello = (user: { name: string, age: number }) => {
 
 
 type stringOrNumber = string | number;
-type userType = {name: stringOrNumber, age:number};
+type userType = { name: stringOrNumber, age: number };
 
 const allisFunc = (id: number, user: userType) => {
     console.log(`id is ${id}, name is ${user.name} & age ${user.age}`);
 }
 
-allisFunc(2, {name:"sayed",age: 27});
+allisFunc(2, { name: "sayed", age: 27 });
 
 
-            // function signiture
+// function signiture
 // 1st
-let testfunc: (x:number, y:number, z:string) => number;
+let testfunc: (x: number, y: number, z: string) => number;
 
-testfunc = (a,b,c) => {
-    if(c === 'add') {
-        return a+b
+testfunc = (a, b, c) => {
+    if (c === 'add') {
+        return a + b
     } else {
-        return a-b
+        return a - b
     }
 }
-testfunc(6,4,'add');
+testfunc(6, 4, 'add');
 
-// classes type
+            // classes type
+// class captain {
+//     name: string;
+//     age: number;
+//     country: string
+
+//     constructor (n:string, a:number ,c: string) {
+//         this.name= n,
+//         this.age= a,
+//         this.country= c
+//     }
+
+//     play() {
+//         console.log(`Name: ${this.name}. player age: ${this.age} from ${this.country}`);
+//     }
+// };
+// const mashrafi = new captain("Mashrafi", 40, "Bangladesh");
+// const sakib = new captain("Sakib", 37, "Bangladesh");
+
+// const players: captain[] = [];
+// players.push(mashrafi);
+// players.push(sakib);
+
+            // access modifier
 class captain {
-    name: string;
-    age: number;
-    country: string
-
-    constructor (n:string, a:number ,c: string) {
-        this.name= n,
-        this.age= a,
-        this.country= c
-    }
+    
+    constructor (
+        public name: string,
+        private age: number,
+        readonly country: string
+    ){}
 
     play() {
         console.log(`Name: ${this.name}. player age: ${this.age} from ${this.country}`);
@@ -121,3 +141,12 @@ const sakib = new captain("Sakib", 37, "Bangladesh");
 const players: captain[] = [];
 players.push(mashrafi);
 players.push(sakib);
+    console.log(mashrafi.country);
+    mashrafi.name = "Mortaza"
+    console.log(mashrafi.name);
+
+    // mashrafi.age = 34 (don't work, it's private)
+    // console.log(mashrafi.age);(don't work, it's private)
+
+    // mashrafi.country = "England" (don't work, it's readonly)
+    console.log(mashrafi.country);
